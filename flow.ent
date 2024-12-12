@@ -1,0 +1,28 @@
+-1
+     10103
+Entities Data
+FANS...
+         1
+Flow Boundary Condition(1)                       1
+RECIRCULATION FANS...
+         0
+VENTS...
+         1
+Flow Boundary Condition(2)                       1
+SCREENS...
+        -1
+FLOW SURFACES...
+         1
+GLOBAL BLOCKAGE                         
+         1         1         1         0         0         0        52         0
+         1         0         0         0         0         0         0         0
+  0.0000000E+00  0.0000000E+00  9.4349875E+04  0.0000000E+00  0.0000000E+00
+  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
+PERIODIC BOUNDARIES...
+         0
+BURSTING MEMBRANES...
+         0
+FLAP BCs...
+         0
+-999
