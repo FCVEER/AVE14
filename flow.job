@@ -5,14 +5,14 @@ CFD Summary Information
         -1
         -1
 termination_criterion                    =          1
-number_of_iterations                     =       1000
-u_momentum_imbalance                     =  2.667813230279e-09
-v_momentum_imbalance                     =  1.869796807519e-09
-w_momentum_imbalance                     =  4.980922506054e-10
-mass_imbalance                           =  1.132670281299e-08
+number_of_iterations                     =         42
+u_momentum_imbalance                     =  3.138055892725e-09
+v_momentum_imbalance                     =  8.982069173636e-10
+w_momentum_imbalance                     =  3.737054990619e-09
+mass_imbalance                           =  2.375372957544e-07
 normalize_mass_imbalance                 =          1
-energy_imbalance                         =  3.436800900186e-08
-max_temp_change                          =  3.323364257813e-02
-norm_heat_imbalance                      =  4.186127501183e-07
+energy_imbalance                         =  9.308677603345e-08
+max_temp_change                          =  1.498413085938e-02
+norm_heat_imbalance                      =  6.948809448462e-07
 END OF PARAMETERS
 -999
