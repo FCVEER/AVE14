@@ -1,0 +1,1933 @@
+ Thermal/Flow Analysis
+ =====================
+ MAYA Heat Transfer Technologies Ltd.
+
+
+ Simcenter3D Thermal/Flow 2021.2.5  Oct 05 2021 (Version 1980.166424)
+
+ Simcenter3D Installation Directory: C:\Program Files\Siemens\NX2000
+
+ Solver Installation Directory: C:/Program Files/Siemens/NX2000/nxcae_extras/tmg
+
+ Run directory specified for analysis:
+ .\
+
+ NX2TMG - Thermal/flow model file builder
+ ======================================================================
+ Time: Sun Jan 12 21:53:49 2025
+
+ +--------------------------------------------------------------------+                              
+ |                            Model Builder                           |                              
+ +--------------------------------------------------------------------+                              
+                                                                                                     
+ Reading model file...                                                                               
+ ...model file read.                                                                                 
+                                                                                                     
+ +--------------------------------------------------------------------+                              
+ |                            Model Summary                           |                              
+ +--------------------------------------------------------------------+                              
+                                                                                                     
+ Finite Element Model                                                                                
+ --------------------                                                                                
+                                                                                                     
+ Solver type:     Simcenter 3D Thermal/Flow                                                          
+ Analysis type:   Coupled Thermal-Flow                                                               
+ Solution type:   Advanced Thermal-Flow                                                              
+ Simulation File: C:\Users\rik\Documents\CAD\AVE14\EJ20_sim1.sim                                     
+ Solution:        Modified                                                                           
+                                                                                                     
+ Number of nodes in thermal model:                    28960                                          
+ Number of elements in thermal model:                 21983                                          
+                                                                                                     
+ Number of nodes in flow model:                       52069                                          
+ Number of elements in flow model:                   194690                                          
+                                                                                                     
+ Number of fluid nodes reused for surface coating:      430                                          
+ Number of elements created for surface coating:       6721                                          
+                                                                                                     
+ Solution Options                                                                                    
+ ----------------                                                                                    
+                                                                                                     
+ Steady-State Analysis                                                                               
+ Solution Method:                                 Concurrent                                         
+ Communication Frequency:                                 1                                          
+ Solving Flow and Thermal                                                                            
+                                                                                                     
+ Ambient Temperature:                             7.000E+01 C                                        
+ Ambient Pressure:                                1.014E+02 mN/mm^2                                  
+ Gravitational Acceleration:                      9.810E+03 mm/s^2                                   
+ Gravity Direction: X: 0.000E+00  Y: 0.000E+00  Z:-1.000E+00                                         
+ Fluid buoyancy:                                  Off                                                
+                                                                                                     
+ Flow solver type:                                Parallel                                           
+ Parallel flow solver scheme:                     Fully Coupled Pressure-Velocity                    
+                                                                                                     
+ Flow laminar/turbulent model:                    Mixing length                                      
+   Length scale is auto calculated                                                                   
+                                                                                                     
+ Flow solver iteration limit:                          1000                                          
+ Flow converged when RMS residual less than:      2.000E-04                                          
+ Flow solver physical time step:                  5.000E-01 s                                        
+ Flow solver heat imbalance:                      2.000E-02                                          
+                                                                                                     
+ Advection Scheme Momentum:                       First Order                                        
+ Advection Scheme Energy (if Solve_Energy):       First Order                                        
+                                                                                                     
+ Global Relaxation Factor:                        7.500E-01                                          
+ Mass Relaxation Factor:                          7.500E-01                                          
+ Fluids Relaxation Factor:                        9.000E-01                                          
+ Turbulence Relaxation Factor:                    1.000E+00                                          
+                                                                                                     
+ Freeze flow field:                               Off                                                
+ High Speed Flow:                                 Off                                                
+ Connect Disjoint Fluid Meshes:                   Off                                                
+                                                                                                     
+ Performing mesh checks...                                                                           
+                                                                                                     
+  - interior and warping angle                                                                       
+    checks on thermal elements...                                                                    
+
+ +--------------------------------------------------------------------+
+ | NX2TMG - WARNING  1209                                      GRP001 |
+ +--------------------------------------------------------------------+
+ | Thermal element(s) with warping angles > 15 deg. found. This may   |
+ | cause convergence problems.                                        |
+ |                                                                    |
+ | List of element labels:                                            |
+ |       96     685     894    1521    1559    1578    1597    1616   |
+ |     1692    1730    1749    1768    1920    1977    1996    2015   |
+ |     2053    2547    2851    2889    2908    3098    3307    3516   |
+ |     3554    3592    3611    4390    4409    4428    4447    4466   |
+ |     4485    4504    4523    4542    4599    4656    4675    4770   |
+ |     4846    5017    5036    5055    5074    5093    5112    5131   |
+ |     5150    5169    5188    5207    5226    5245    5264    5283   |
+ |     5302    5321    5340    5359    5378    5397    5416    5435   |
+ |      ... list too long to display.                                 |
+ | Number of elements found:    247                                   |
+ +--------------------------------------------------------------------+
+
+
+ +--------------------------------------------------------------------+
+ | NX2TMG - WARNING  1663                                             |
+ +--------------------------------------------------------------------+
+ | Model contains         1 elements with warping angles above 90 deg |
+ | The solution for these elements may be inaccurate:                 |
+ |                                                                    |
+ |    21756                                                           |
+ |                                                                    |
+ +--------------------------------------------------------------------+
+
+    ...angle checks on thermal                                                                       
+       elements completed.                                                                           
+                                                                                                     
+  - coincident node check                                                                            
+    on thermal model...                                                                              
+    ...node check on thermal                                                                         
+       model completed.                                                                              
+                                                                                                     
+ ...mesh checks completed.                                                                           
+                                                                                                     
+ Building free face list...                                                                          
+ ...found   73006 free faces.                                                                        
+                                                                                                     
+ Automatic Convecting Flow Blockage            Surface Property                                      
+ ----------------------------------------------------------------------                              
+   1 - GLOBAL BLOCKAGE               Default surface property                                        
+          Volume:  9.827E+05  mm^3                                                                   
+ ----------------------------------------------------------------------                              
+                                                                                                     
+ Processing flow blockages...                                                                        
+ ...Blockage  1 done.                                                                                
+                                                                                                     
+ Processing inlets/outlets/internal fans...                                                          
+                                                                                                     
+  - Building entity face list...                                                                     
+    ...found        324 entity faces.                                                                
+ ...Inlet   1 done.                                                                                  
+                                                                                                     
+ Processing openings...                                                                              
+                                                                                                     
+  - Building entity face list...                                                                     
+    ...found        393 entity faces.                                                                
+ ...Opening  2 done.                                                                                 
+                                                                                                     
+ Automatic Flow Surface               Surface Property   Surfc Elements                              
+                                      +ve and -ve sides                                              
+ ----------------------------------------------------------------------                              
+   2 - GLOBAL NON BLOCKING FLOW SUR  Default surface prop    6004                                    
+       Area:  8.668E+04 mm^2                                                                         
+ ----------------------------------------------------------------------                              
+                                                                                                     
+ Processing flow surfaces...                                                                         
+                                                                                                     
+  - Building entity face list...                                                                     
+    ...found      12303 entity faces.                                                                
+ ...Flow Surface  1 done,                                                                            
+                                                                                                     
+  - Building entity face list...                                                                     
+ ...Flow Surface  2 done.                                                                            
+                                                                                                     
+ Thermal Boundary Conditions                                                                         
+ ---------------------------                                                                         
+                                                                                                     
+ Number of thermal boundary  conditions:                   4                                         
+                                                                                                     
+ Thermal Boundary Condition     Type         Value              FSF TCP                              
+ ----------------------------------------------------------------------                              
+   2 - Thermal Load(2)          Heat Load    8.500E+09 mN-mm/s  All No                               
+   3 - Thermal Load(3)          Heat Load    8.500E+09 mN-mm/s  All No                               
+   4 - Thermal Load(4)          Heat Load    8.500E+09 mN-mm/s  All No                               
+   5 - Thermal Load(5)          Heat Load    8.500E+09 mN-mm/s  All No                               
+   1 - INIT_BC                  Initial Temp 7.000E+01 C        Yes No                               
+                                                                                                     
+ Surface Property Definitions                                                                        
+ -----------------------------                                                                       
+                                                                                                     
+   1 - Default surface property                                                                      
+       Roughness:  0.000E+00 mm                                                                      
+       Heat Transfer Coefficient: Auto. Calc. Forced Convection                                      
+                                                                                                     
+ Inlets                                                                                              
+ ------                                                                                              
+                                                                                                     
+ Number of inlet:                                          1                                         
+                                                                                                     
+ Inlet                               Type           Value                                            
+ ----------------------------------------------------------------------                              
+   1 - Flow Boundary Condition(1)    Mass Flow       4.000E+00  kg/s                                 
+       Area:  1.588E+03 mm^2                                                                         
+ ----------------------------------------------------------------------                              
+                                                                                                     
+ Openings                                                                                            
+ --------                                                                                            
+                                                                                                     
+ Number of openings:                                       1                                         
+                                                                                                     
+ Opening                             Type                                                            
+ ----------------------------------------------------------------------                              
+   2 - Flow Boundary Condition(2)    Ambient                                                         
+       Area:  1.377E+03 mm^2                                                                         
+ ----------------------------------------------------------------------                              
+                                                                                                     
+ Sub-domains                                                                                         
+ -----------                                                                                         
+                                                                                                     
+ Sub-domain Elements   Fluid                           Volume                                        
+ ----------------------------------------------------------------------                              
+   1          194690   Liquid : Water[3]               1.8297E+06 mm^3                               
+ ----------------------------------------------------------------------                              
+                                                                                                     
+ Writing flow model files...                                                                         
+ ...done.                                                                                            
+                                                                                                     
+ Writing thermal model files...                                                                      
+ ...done.                                                                                            
+ Parallel Flow Solver
+ ====================================
+ MAYA Heat Transfer Technologies Ltd.
+
+
+ Version: 2021.2.5  Oct 05 2021
+
+
+ Run directory specified for analysis:
+ .\
+
+ Executing Coupled Thermal/Flow Solver
+
+ COUPLED - Coupled Flow/Thermal analysis
+ ======================================================================
+ Time: Sun Jan 12 21:54:02 2025
+
+
+ +--------------------------------------------------------------------+
+ | Solving Thermal Model - Elapsed Time: 00 min 00 sec                |
+ +--------------------------------------------------------------------+
+
+
+ MAIN - Prepare analysis
+ ======================================================================
+ Time: Sun Jan 12 21:54:02 2025
+
+ Cpu time=      0.0       MAIN Module
+
+   Starting TMG Analysis...
+
+   ...done.
+
+
+ DATACH - Model check
+ ======================================================================
+ Time: Sun Jan 12 21:54:03 2025
+
+ Cpu time=      0.1     DATACH Module
+
+   Performing data checking...
+
+     Number of nodes                       35650
+     Number of geometric elements          46463
+     Number of 1-D/duct fluid elements         0
+
+   ...done.
+
+
+ ECHOS - Element geometry
+ ======================================================================
+ Time: Sun Jan 12 21:54:04 2025
+
+ Cpu time=      0.9      ECHOS Module
+
+   Calculating geometrical parameters...
+
+   ...done.
+
+
+ CONDN - Conduction model build
+ ======================================================================
+ Time: Sun Jan 12 21:54:05 2025
+
+ Cpu time=      1.5       COND Module
+
+   Calculating conductive conductances and capacitances...
+
+   ...done.
+
+
+ VUFAC - Convection and thermal couplings
+ ======================================================================
+ Time: Sun Jan 12 21:54:08 2025
+
+ Cpu time=      4.8      VUFAC Module
+
+   Calculating thermal couplings and geometric radiative parameters...
+
+   ...done.
+
+
+ GRAYB - Gray body view factor
+ ======================================================================
+ Time: Sun Jan 12 21:54:10 2025
+
+ Cpu time=      5.7      GRAYB Module
+
+   Calculating radiative couplings and/or gray body matrices...
+
+   ...done.
+
+
+ POWER - Calculating radiative heat fluxes
+ ======================================================================
+ Time: Sun Jan 12 21:54:10 2025
+
+ Cpu time=      5.8      POWER Module
+
+   Calculating radiative heat loads...
+     No radiative heat loads calculated.
+
+   ...done.
+
+
+ MEREL - Model merge
+ ======================================================================
+ Time: Sun Jan 12 21:54:10 2025
+
+ Cpu time=      5.8      MEREL Module
+
+   Performing element merging and elimination...
+
+   ...done.
+
+
+ Solver - Parallel Flow Solve
+ ======================================================================
+ Time: Sun Jan 12 21:54:12 2025
+
+
+         
+ +------------------------------------------------------------------------+
+ |                    NIECE - Fluid Domain Partitioner                    |
+ |                  MAYA Heat Transfer Technologies Ltd.                  |
+ +------------------------------------------------------------------------+
+
+  Loading geometry...
+    Loading nodes...
+    Loading elements...
+    Loading faces...
+  Found 1 global flow enclosure 
+  Partitioning enclosure 1 (52069 nodes)
+    Storing partitioning information...
+  Done. 
+
+ +------------------------------------------------------------------------+
+ |                      NIECE - Parallel Flow Solver                      |
+ |                  MAYA Heat Transfer Technologies Ltd.                  |
+ +------------------------------------------------------------------------+
+
+   This product includes Trilinos: An Object-Oriented Solver Framework,
+   Copyright (2001) Sandia Corporation. The Trilinos library is licensed
+   under the GNU Lesser General Public License, a copy of which is found
+   in the TMG installation folder (tmg/install). Please consult the Flow
+   Reference Manual for more information about Trilinos.
+
+
+
+ Running on 1 process(es)
+
+ Initializing...
+  Loading geometry...
+    Loading nodes...
+    Loading elements...
+    Loading faces...
+  Loading physical conditions...
+  Creating solver enclosures...
+    Creating Flow Enclosure 1...
+    Creating Thermal Enclosure...
+  Initializing Flow Enclosure...
+  Initializing Thermal Enclosure...
+ Done initializing, ready to start run.
+
+ +------------------------------------------------------------------------+
+ |                                                                        |
+ |   Steady-state convergence history - Coupled thermal/flow simulation   |
+ |              Using fully-coupled pressure-velocity scheme              |
+ |                                                                        |
+ +------------------------------------------------------------------------+
+ Note: During the analysis process a number of elements have been
+ created whose labels you may not recognize. To find out more about
+ these elements and the elements they are associated with, please
+ look on file REPF for the phrase 'TMG element'
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         1         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 1                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    8  |   4.789e-10  |  0.00  |   8.725e-18  |  OK   |
+ | V - Mom         |    8  |   4.789e-10  |  0.00  |   7.396e-03  |  --   |
+ | W - Mom         |    8  |   4.789e-10  |  0.00  |   1.059e-17  |  OK   |
+ | P - Mass        |    8  |   4.789e-10  |  0.00  |   7.386e-06  |  OK   |
+ | H - Energy      |   37  |   2.196e+04  |  0.00  |   2.533e-04  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 1                                             |
+ **  WARNING  4964 **
+ **  The following fluid elements do not convect to any solids.
+ **  A complete element list appears in file groups.unv with the
+ **  group name FLUIDS_NOT_CONNECTED_TO_SOLIDS_000018.
+ 22912     24756     30347     31941     53460     64958
+ 65545     65628     79214     79857     80262     88875
+ 92905    101001    110636    123662    124189    128959
+ 136278    147027    147470    160706    160707    169750
+ 169850    175498    184397    194541    198616    203399
+ 203417    205135    211233    215950    215997    216041
+ 216064
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 0.00E+00  |    223786| 0.00E+00  |    223786| 0.00E+00   LO |
+ | T-Solid  | 6.72E+02  |    228525| 8.94E+02  |    220789| 7.65E+02    F |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (0.000e+00)
+ | Heat Imbalance  |  0.00  |   2.000e+00  |  --   | To solid:  0.000e+00
+ | Max delta T     |  0.00  |   7.838e+02  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         2         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 2                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    3  |   1.120e+01  |  ++++  |   8.678e-03  |  --   |
+ | V - Mom         |    3  |   1.120e+01  |  1.08  |   7.973e-03  |  --   |
+ | W - Mom         |    3  |   1.120e+01  |  ++++  |   3.760e-03  |  --   |
+ | P - Mass        |    3  |   1.120e+01  |  ++++  |   5.165e-04  |  --   |
+ | H - Energy      |   39  |   6.489e+05  |  ++++  |   8.468e-01  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 2                                             |
+ **  WARNING  4903 **
+ **  Interpolation truncated for table number     4 at iteration       1
+ **  X =   7.2955E+02,  Number of table entries      32
+ Y               X
+ 1.5425E+05      2.0000E+01
+ 1.5432E+05      2.1110E+01
+ .... Table too long to display.
+ Only the first    2 table entries are shown.
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.70E+00  |    223795| 6.24E+01  |    228319| 2.48E+01   ok |
+ | T-Solid  | 1.80E+02  |    228525| 3.80E+02  |    220074| 2.86E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.389e+10)
+ | Heat Imbalance  |  0.00  |   3.275e-03  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.70  |   5.519e+02  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         3         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 3                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.993e+01  |  0.65  |   5.653e-03  |  --   |
+ | V - Mom         |    1  |   2.993e+01  |  0.64  |   5.078e-03  |  --   |
+ | W - Mom         |    1  |   2.993e+01  |  0.93  |   3.493e-03  |  --   |
+ | P - Mass        |    1  |   2.993e+01  |  3.25  |   1.677e-03  |  --   |
+ | H - Energy      |   46  |   1.575e+06  |  0.00  |   3.519e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 3                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.87E+00  |    226631| 3.12E+02  |    228322| 7.96E+01   ok |
+ | T-Solid  | 9.31E+01  |    228525| 2.52E+02  |    219314| 1.63E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.402e+10)
+ | Heat Imbalance  |  0.22  |   7.320e-04  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.28  |   1.562e+02  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         4         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 4                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.645e+01  |  0.90  |   5.069e-03  |  --   |
+ | V - Mom         |    1  |   1.645e+01  |  0.71  |   3.609e-03  |  --   |
+ | W - Mom         |    1  |   1.645e+01  |  0.84  |   2.917e-03  |  --   |
+ | P - Mass        |    1  |   1.645e+01  |  0.31  |   5.199e-04  |  --   |
+ | H - Energy      |   29  |   1.077e+06  |  1.26  |   4.445e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 4                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.64E+00  |    226631| 4.20E+02  |    228322| 1.09E+02   ok |
+ | T-Solid  | 8.51E+01  |    228525| 2.42E+02  |    219333| 1.47E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.402e+10)
+ | Heat Imbalance  |  0.73  |   5.315e-04  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.24  |   3.796e+01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         5         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 5                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |   37  |   3.951e-01  |  0.45  |   2.299e-03  |  --   |
+ | V - Mom         |   37  |   3.951e-01  |  0.46  |   1.651e-03  |  --   |
+ | W - Mom         |   37  |   3.951e-01  |  0.57  |   1.663e-03  |  --   |
+ | P - Mass        |   37  |   3.951e-01  |  0.38  |   1.997e-04  |  OK   |
+ | H - Energy      |   21  |   1.271e+06  |  0.60  |   2.680e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 5                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 6.85E-01  |    226765| 4.50E+02  |    225576| 1.10E+02   ok |
+ | T-Solid  | 8.49E+01  |    228525| 2.48E+02  |    219371| 1.47E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.401e+10)
+ | Heat Imbalance  |  0.35  |   1.876e-04  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.46  |   1.761e+01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         6         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 6                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   4.588e+00  |  0.61  |   1.407e-03  |  --   |
+ | V - Mom         |    1  |   4.588e+00  |  0.69  |   1.139e-03  |  --   |
+ | W - Mom         |    1  |   4.588e+00  |  0.62  |   1.037e-03  |  --   |
+ | P - Mass        |    1  |   4.588e+00  |  0.64  |   1.282e-04  |  OK   |
+ | H - Energy      |   15  |   8.558e+05  |  1.64  |   4.388e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 6                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.58E+00  |    226631| 4.67E+02  |    225576| 1.12E+02   ok |
+ | T-Solid  | 8.47E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.399e+10)
+ | Heat Imbalance  |  1.58  |   2.969e-04  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.61  |   1.071e+01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         7         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 7                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.906e+00  |  0.58  |   8.096e-04  |  --   |
+ | V - Mom         |    1  |   1.906e+00  |  0.62  |   7.089e-04  |  --   |
+ | W - Mom         |    1  |   1.906e+00  |  0.73  |   7.606e-04  |  --   |
+ | P - Mass        |    1  |   1.906e+00  |  0.65  |   8.324e-05  |  OK   |
+ | H - Energy      |   39  |   5.902e+05  |  1.28  |   5.608e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 7                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.00E+00  |    228156| 4.76E+02  |    225576| 1.13E+02   ok |
+ | T-Solid  | 8.47E+01  |    228525| 2.62E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.399e+10)
+ | Heat Imbalance  |  0.65  |   1.943e-04  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.86  |   9.214e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         8         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 8                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.947e+00  |  0.68  |   5.497e-04  |  --   |
+ | V - Mom         |    1  |   1.947e+00  |  0.72  |   5.110e-04  |  --   |
+ | W - Mom         |    1  |   1.947e+00  |  0.69  |   5.271e-04  |  --   |
+ | P - Mass        |    1  |   1.947e+00  |  0.63  |   5.254e-05  |  OK   |
+ | H - Energy      |   31  |   5.838e+05  |  0.67  |   3.760e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 8                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.38E+00  |    223362| 4.83E+02  |    225576| 1.13E+02   ok |
+ | T-Solid  | 8.46E+01  |    228525| 2.63E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.40  |   7.763e-05  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.52  |   4.773e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+         9         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 9                            |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.221e+00  |  0.66  |   3.604e-04  |  --   |
+ | V - Mom         |    1  |   1.221e+00  |  0.70  |   3.569e-04  |  --   |
+ | W - Mom         |    1  |   1.221e+00  |  0.77  |   4.062e-04  |  --   |
+ | P - Mass        |    1  |   1.221e+00  |  0.65  |   3.399e-05  |  OK   |
+ | H - Energy      |   30  |   3.302e+05  |  0.53  |   1.978e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 9                                             |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.39E+00  |    223362| 4.85E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.46E+01  |    228525| 2.61E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.06  |   8.246e-05  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.74  |   3.528e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        10         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 10                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   8.260e-01  |  0.78  |   2.799e-04  |  --   |
+ | V - Mom         |    1  |   8.260e-01  |  0.75  |   2.664e-04  |  --   |
+ | W - Mom         |    1  |   8.260e-01  |  0.71  |   2.900e-04  |  --   |
+ | P - Mass        |    1  |   8.260e-01  |  0.65  |   2.207e-05  |  OK   |
+ | H - Energy      |   27  |   2.160e+05  |  0.64  |   1.261e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 10                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.50E+00  |    223362| 4.87E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.61E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.66  |   5.426e-05  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.54  |   1.917e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        11         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 11                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   5.599e-01  |  0.79  |   2.203e-04  |  --   |
+ | V - Mom         |    1  |   5.599e-01  |  0.83  |   2.222e-04  |  --   |
+ | W - Mom         |    1  |   5.599e-01  |  0.84  |   2.432e-04  |  --   |
+ | P - Mass        |    1  |   5.599e-01  |  0.66  |   1.464e-05  |  OK   |
+ | H - Energy      |   28  |   1.483e+05  |  1.08  |   1.364e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 11                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.30E+00  |    223363| 4.88E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.61E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.41  |   7.641e-05  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.61  |   1.170e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        12         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 12                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |   36  |   4.912e-03  |  0.79  |   1.741e-04  |  OK   |
+ | V - Mom         |   36  |   4.912e-03  |  0.82  |   1.816e-04  |  OK   |
+ | W - Mom         |   36  |   4.912e-03  |  0.87  |   2.116e-04  |  --   |
+ | P - Mass        |   36  |   4.912e-03  |  0.67  |   9.851e-06  |  OK   |
+ | H - Energy      |   30  |   1.343e+05  |  1.24  |   1.686e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 12                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.23E+00  |    223363| 4.88E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.60E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.65  |   1.260e-04  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.97  |   1.137e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        13         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 13                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   3.008e-01  |  0.66  |   1.143e-04  |  OK   |
+ | V - Mom         |    1  |   3.008e-01  |  0.60  |   1.090e-04  |  OK   |
+ | W - Mom         |    1  |   3.008e-01  |  0.68  |   1.431e-04  |  OK   |
+ | P - Mass        |    1  |   3.008e-01  |  0.71  |   7.025e-06  |  OK   |
+ | H - Energy      |   46  |   1.110e+05  |  0.77  |   1.292e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 13                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 9.43E-01  |    225664| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.60E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.35  |   4.432e-05  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.03  |   1.167e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        14         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 14                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.541e-01  |  0.74  |   8.405e-05  |  OK   |
+ | V - Mom         |    1  |   1.541e-01  |  0.87  |   9.505e-05  |  OK   |
+ | W - Mom         |    1  |   1.541e-01  |  0.80  |   1.150e-04  |  OK   |
+ | P - Mass        |    1  |   1.541e-01  |  0.71  |   4.971e-06  |  OK   |
+ | H - Energy      |   36  |   6.174e+04  |  0.88  |   1.133e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 14                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 6.26E-01  |    225664| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.59E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.57  |   2.515e-05  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.13  |   1.323e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        15         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 15                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.525e-01  |  0.75  |   6.282e-05  |  OK   |
+ | V - Mom         |    1  |   1.525e-01  |  0.80  |   7.556e-05  |  OK   |
+ | W - Mom         |    1  |   1.525e-01  |  0.82  |   9.425e-05  |  OK   |
+ | P - Mass        |    1  |   1.525e-01  |  0.74  |   3.698e-06  |  OK   |
+ | H - Energy      |   40  |   5.173e+04  |  1.01  |   1.141e-03  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 15                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 6.64E-01  |    225664| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.58E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.32  |   8.074e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.83  |   1.101e+00  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        16         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 16                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.163e-01  |  0.78  |   4.905e-05  |  OK   |
+ | V - Mom         |    1  |   1.163e-01  |  0.88  |   6.659e-05  |  OK   |
+ | W - Mom         |    1  |   1.163e-01  |  0.85  |   8.003e-05  |  OK   |
+ | P - Mass        |    1  |   1.163e-01  |  0.74  |   2.735e-06  |  OK   |
+ | H - Energy      |   33  |   3.999e+04  |  0.86  |   9.785e-04  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 16                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 4.84E-01  |    223362| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.57E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.01  |   7.512e-08  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.72  |   7.899e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        17         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 17                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   8.747e-02  |  0.82  |   4.024e-05  |  OK   |
+ | V - Mom         |    1  |   8.747e-02  |  0.81  |   5.378e-05  |  OK   |
+ | W - Mom         |    1  |   8.747e-02  |  0.84  |   6.686e-05  |  OK   |
+ | P - Mass        |    1  |   8.747e-02  |  0.76  |   2.076e-06  |  OK   |
+ | H - Energy      |   25  |   2.617e+04  |  0.89  |   8.676e-04  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 17                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 8.38E-01  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.57E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  ++++  |   1.397e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.77  |   6.084e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        18         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 18                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   6.521e-02  |  0.81  |   3.263e-05  |  OK   |
+ | V - Mom         |    1  |   6.521e-02  |  0.85  |   4.581e-05  |  OK   |
+ | W - Mom         |    1  |   6.521e-02  |  0.84  |   5.593e-05  |  OK   |
+ | P - Mass        |    1  |   6.521e-02  |  0.77  |   1.593e-06  |  OK   |
+ | H - Energy      |   24  |   2.160e+04  |  0.68  |   5.928e-04  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 18                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 8.42E-01  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.35  |   1.881e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.74  |   4.524e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        19         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 19                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   4.792e-02  |  0.83  |   2.718e-05  |  OK   |
+ | V - Mom         |    1  |   4.792e-02  |  0.83  |   3.783e-05  |  OK   |
+ | W - Mom         |    1  |   4.792e-02  |  0.82  |   4.612e-05  |  OK   |
+ | P - Mass        |    1  |   4.792e-02  |  0.78  |   1.235e-06  |  OK   |
+ | H - Energy      |   21  |   2.074e+04  |  0.59  |   3.522e-04  |  --   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 19                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 8.75E-01  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  2.84  |   5.346e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.72  |   3.243e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        20         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 20                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   3.444e-02  |  0.85  |   2.315e-05  |  OK   |
+ | V - Mom         |    1  |   3.444e-02  |  0.89  |   3.351e-05  |  OK   |
+ | W - Mom         |    1  |   3.444e-02  |  0.87  |   4.007e-05  |  OK   |
+ | P - Mass        |    1  |   3.444e-02  |  0.75  |   9.209e-07  |  OK   |
+ | H - Energy      |   40  |   2.854e+03  |  0.55  |   1.937e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 20                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 7.67E-01  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.68  |   3.635e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.67  |   2.174e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        21         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 21                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.426e-02  |  0.85  |   1.972e-05  |  OK   |
+ | V - Mom         |    1  |   2.426e-02  |  0.95  |   3.196e-05  |  OK   |
+ | W - Mom         |    1  |   2.426e-02  |  0.99  |   3.982e-05  |  OK   |
+ | P - Mass        |    1  |   2.426e-02  |  0.75  |   6.915e-07  |  OK   |
+ | H - Energy      |   47  |   9.894e+03  |  0.67  |   1.297e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 21                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 8.01E-01  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.93  |   3.380e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.63  |   1.378e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        22         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 22                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.720e-02  |  0.86  |   1.689e-05  |  OK   |
+ | V - Mom         |    1  |   1.720e-02  |  1.02  |   3.275e-05  |  OK   |
+ | W - Mom         |    1  |   1.720e-02  |  1.07  |   4.242e-05  |  OK   |
+ | P - Mass        |    1  |   1.720e-02  |  0.77  |   5.357e-07  |  OK   |
+ | H - Energy      |   32  |   9.189e+03  |  1.12  |   1.453e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 22                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 9.09E-01  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.89  |   3.003e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.00  |   1.374e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        23         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 23                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.369e-02  |  0.88  |   1.485e-05  |  OK   |
+ | V - Mom         |    1  |   1.369e-02  |  1.09  |   3.582e-05  |  OK   |
+ | W - Mom         |    1  |   1.369e-02  |  1.10  |   4.678e-05  |  OK   |
+ | P - Mass        |    1  |   1.369e-02  |  0.81  |   4.363e-07  |  OK   |
+ | H - Energy      |   35  |   6.909e+03  |  1.27  |   1.846e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 23                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.02E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.00  |   4.675e-09  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.15  |   1.574e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        24         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 24                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.355e-02  |  0.89  |   1.328e-05  |  OK   |
+ | V - Mom         |    1  |   1.355e-02  |  1.17  |   4.195e-05  |  OK   |
+ | W - Mom         |    1  |   1.355e-02  |  1.07  |   5.016e-05  |  OK   |
+ | P - Mass        |    1  |   1.355e-02  |  0.88  |   3.848e-07  |  OK   |
+ | H - Energy      |   29  |   4.375e+03  |  1.07  |   1.978e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 24                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.11E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  ++++  |   3.458e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.14  |   1.796e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        25         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 25                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.531e-02  |  0.88  |   1.165e-05  |  OK   |
+ | V - Mom         |    1  |   1.531e-02  |  1.11  |   4.638e-05  |  OK   |
+ | W - Mom         |    1  |   1.531e-02  |  1.04  |   5.203e-05  |  OK   |
+ | P - Mass        |    1  |   1.531e-02  |  0.98  |   3.773e-07  |  OK   |
+ | H - Energy      |   33  |   2.528e+03  |  0.90  |   1.778e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 25                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.18E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.35  |   1.195e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.06  |   1.911e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        26         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 26                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.764e-02  |  0.89  |   1.036e-05  |  OK   |
+ | V - Mom         |    1  |   1.764e-02  |  0.93  |   4.301e-05  |  OK   |
+ | W - Mom         |    1  |   1.764e-02  |  0.98  |   5.091e-05  |  OK   |
+ | P - Mass        |    1  |   1.764e-02  |  1.03  |   3.888e-07  |  OK   |
+ | H - Energy      |   33  |   4.828e+03  |  0.84  |   1.489e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 26                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.23E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.15  |   1.380e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.01  |   1.929e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        27         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 27                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.989e-02  |  0.90  |   9.284e-06  |  OK   |
+ | V - Mom         |    1  |   1.989e-02  |  0.84  |   3.633e-05  |  OK   |
+ | W - Mom         |    1  |   1.989e-02  |  0.92  |   4.698e-05  |  OK   |
+ | P - Mass        |    1  |   1.989e-02  |  1.01  |   3.927e-07  |  OK   |
+ | H - Energy      |   24  |   5.740e+03  |  0.80  |   1.192e-04  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 27                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.26E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  3.17  |   4.369e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.07  |   2.058e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        28         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 28                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.168e-02  |  0.91  |   8.432e-06  |  OK   |
+ | V - Mom         |    1  |   2.168e-02  |  0.85  |   3.094e-05  |  OK   |
+ | W - Mom         |    1  |   2.168e-02  |  0.91  |   4.264e-05  |  OK   |
+ | P - Mass        |    1  |   2.168e-02  |  0.95  |   3.735e-07  |  OK   |
+ | H - Energy      |   22  |   5.418e+03  |  0.78  |   9.316e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 28                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.28E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.09  |   3.996e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.00  |   2.054e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        29         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 29                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.282e-02  |  0.91  |   7.677e-06  |  OK   |
+ | V - Mom         |    1  |   2.282e-02  |  0.95  |   2.926e-05  |  OK   |
+ | W - Mom         |    1  |   2.282e-02  |  0.82  |   3.488e-05  |  OK   |
+ | P - Mass        |    1  |   2.282e-02  |  0.96  |   3.570e-07  |  OK   |
+ | H - Energy      |   23  |   5.875e+03  |  0.77  |   7.164e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 29                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.30E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  5.05  |   2.018e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.96  |   1.963e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        30         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 30                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.314e-02  |  0.91  |   7.017e-06  |  OK   |
+ | V - Mom         |    1  |   2.314e-02  |  0.96  |   2.810e-05  |  OK   |
+ | W - Mom         |    1  |   2.314e-02  |  0.82  |   2.845e-05  |  OK   |
+ | P - Mass        |    1  |   2.314e-02  |  1.03  |   3.671e-07  |  OK   |
+ | H - Energy      |   25  |   5.063e+03  |  0.76  |   5.450e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 30                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.32E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.37  |   7.427e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.98  |   1.918e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        31         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 31                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.252e-02  |  0.96  |   6.762e-06  |  OK   |
+ | V - Mom         |    1  |   2.252e-02  |  1.16  |   3.265e-05  |  OK   |
+ | W - Mom         |    1  |   2.252e-02  |  1.13  |   3.207e-05  |  OK   |
+ | P - Mass        |    1  |   2.252e-02  |  1.02  |   3.738e-07  |  OK   |
+ | H - Energy      |   26  |   4.814e+03  |  0.76  |   4.121e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 31                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.33E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.83  |   6.173e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.17  |   2.240e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        32         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 32                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.109e-02  |  0.98  |   6.656e-06  |  OK   |
+ | V - Mom         |    1  |   2.109e-02  |  1.05  |   3.444e-05  |  OK   |
+ | W - Mom         |    1  |   2.109e-02  |  1.02  |   3.275e-05  |  OK   |
+ | P - Mass        |    1  |   2.109e-02  |  1.06  |   3.956e-07  |  OK   |
+ | H - Energy      |   25  |   4.761e+03  |  0.75  |   3.081e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 32                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.34E+00  |    223380| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.31  |   1.921e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.23  |   2.764e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        33         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 33                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.914e-02  |  0.99  |   6.578e-06  |  OK   |
+ | V - Mom         |    1  |   1.914e-02  |  0.98  |   3.376e-05  |  OK   |
+ | W - Mom         |    1  |   1.914e-02  |  0.96  |   3.153e-05  |  OK   |
+ | P - Mass        |    1  |   1.914e-02  |  1.03  |   4.082e-07  |  OK   |
+ | H - Energy      |   27  |   3.785e+03  |  0.74  |   2.277e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 33                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223190| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  5.61  |   1.078e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.09  |   3.022e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        34         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 34                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.683e-02  |  1.03  |   6.751e-06  |  OK   |
+ | V - Mom         |    1  |   1.683e-02  |  0.46  |   1.545e-05  |  OK   |
+ | W - Mom         |    1  |   1.683e-02  |  0.41  |   1.307e-05  |  OK   |
+ | P - Mass        |    1  |   1.683e-02  |  0.99  |   4.058e-07  |  OK   |
+ | H - Energy      |   18  |   4.070e+03  |  0.74  |   1.685e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 34                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223190| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.14  |   1.470e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  1.02  |   3.091e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        35         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 35                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.433e-02  |  1.06  |   7.135e-06  |  OK   |
+ | V - Mom         |    1  |   1.433e-02  |  0.57  |   8.768e-06  |  OK   |
+ | W - Mom         |    1  |   1.433e-02  |  0.64  |   8.390e-06  |  OK   |
+ | P - Mass        |    1  |   1.433e-02  |  0.71  |   2.866e-07  |  OK   |
+ | H - Energy      |   27  |   3.126e+03  |  0.76  |   1.276e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 35                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223190| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  7.99  |   1.174e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.54  |   1.655e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        36         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 36                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.186e-02  |  1.09  |   7.791e-06  |  OK   |
+ | V - Mom         |    1  |   1.186e-02  |  0.72  |   6.295e-06  |  OK   |
+ | W - Mom         |    1  |   1.186e-02  |  0.80  |   6.739e-06  |  OK   |
+ | P - Mass        |    1  |   1.186e-02  |  0.76  |   2.187e-07  |  OK   |
+ | H - Energy      |   24  |   3.030e+03  |  0.81  |   1.037e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 36                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223190| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.49  |   5.800e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.63  |   1.035e-01  |  --   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        37         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 37                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   9.541e-03  |  1.12  |   8.721e-06  |  OK   |
+ | V - Mom         |    1  |   9.541e-03  |  0.76  |   4.797e-06  |  OK   |
+ | W - Mom         |    1  |   9.541e-03  |  0.81  |   5.481e-06  |  OK   |
+ | P - Mass        |    1  |   9.541e-03  |  0.79  |   1.735e-07  |  OK   |
+ | H - Energy      |   26  |   2.011e+03  |  0.91  |   9.464e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 37                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223190| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  2.44  |   1.418e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.70  |   7.220e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        38         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 38                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   7.495e-03  |  1.15  |   1.001e-05  |  OK   |
+ | V - Mom         |    1  |   7.495e-03  |  0.79  |   3.811e-06  |  OK   |
+ | W - Mom         |    1  |   7.495e-03  |  0.83  |   4.545e-06  |  OK   |
+ | P - Mass        |    1  |   7.495e-03  |  0.82  |   1.418e-07  |  OK   |
+ | H - Energy      |   24  |   1.801e+03  |  1.01  |   9.538e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 38                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223190| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.58  |   2.239e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.67  |   4.848e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        39         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 39                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   5.770e-03  |  1.18  |   1.177e-05  |  OK   |
+ | V - Mom         |    1  |   5.770e-03  |  0.81  |   3.072e-06  |  OK   |
+ | W - Mom         |    1  |   5.770e-03  |  0.85  |   3.874e-06  |  OK   |
+ | P - Mass        |    1  |   5.770e-03  |  0.81  |   1.150e-07  |  OK   |
+ | H - Energy      |   28  |   1.512e+03  |  1.01  |   9.604e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 39                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.86  |   1.932e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.77  |   3.748e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        40         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 40                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   4.355e-03  |  1.07  |   1.260e-05  |  OK   |
+ | V - Mom         |    1  |   4.355e-03  |  0.80  |   2.471e-06  |  OK   |
+ | W - Mom         |    1  |   4.355e-03  |  0.83  |   3.206e-06  |  OK   |
+ | P - Mass        |    1  |   4.355e-03  |  0.81  |   9.365e-08  |  OK   |
+ | H - Energy      |   24  |   1.157e+03  |  1.02  |   9.769e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 40                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.09  |   1.756e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.72  |   2.695e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        41         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 41                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   3.234e-03  |  1.08  |   1.357e-05  |  OK   |
+ | V - Mom         |    1  |   3.234e-03  |  0.83  |   2.051e-06  |  OK   |
+ | W - Mom         |    1  |   3.234e-03  |  0.84  |   2.701e-06  |  OK   |
+ | P - Mass        |    1  |   3.234e-03  |  0.82  |   7.681e-08  |  OK   |
+ | H - Energy      |   25  |   1.082e+03  |  1.05  |   1.024e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 41                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  4.55  |   7.985e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.79  |   2.130e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        42         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 42                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   2.363e-03  |  1.11  |   1.506e-05  |  OK   |
+ | V - Mom         |    1  |   2.363e-03  |  0.86  |   1.756e-06  |  OK   |
+ | W - Mom         |    1  |   2.363e-03  |  0.88  |   2.381e-06  |  OK   |
+ | P - Mass        |    1  |   2.363e-03  |  0.82  |   6.336e-08  |  OK   |
+ | H - Energy      |   28  |   1.015e+03  |  1.07  |   1.091e-05  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 42                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.64  |   1.312e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.72  |   1.535e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        43         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 43                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.707e-03  |  1.11  |   1.672e-05  |  OK   |
+ | V - Mom         |    1  |   1.707e-03  |  0.90  |   1.584e-06  |  OK   |
+ | W - Mom         |    1  |   1.707e-03  |  0.93  |   2.214e-06  |  OK   |
+ | P - Mass        |    1  |   1.707e-03  |  0.87  |   5.505e-08  |  OK   |
+ | H - Energy      |   25  |   2.440e+02  |  0.84  |   9.130e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 43                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  1.06  |   1.392e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.74  |   1.132e-02  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        44         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 44                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   1.234e-03  |  0.67  |   1.117e-05  |  OK   |
+ | V - Mom         |    1  |   1.234e-03  |  0.88  |   1.395e-06  |  OK   |
+ | W - Mom         |    1  |   1.234e-03  |  0.86  |   1.911e-06  |  OK   |
+ | P - Mass        |    1  |   1.234e-03  |  0.95  |   5.235e-08  |  OK   |
+ | H - Energy      |   29  |   4.626e+02  |  0.78  |   7.147e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 44                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.76  |   1.065e-06  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.73  |   8.224e-03  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+ | The specified flow residuals, flow imbalances   |
+ | and coupled convergence criteria have been      |
+ | satisfied, however, the solution will continue  |
+ | to iterate because the thermal solver is not    |
+ | converged.                                      |
+ +-----------------+--------+--------------+-------+
+
+                   +----------------------+-------------------------------+
+  Global iteration |     Linear Solver    |       Convergence info        |
+        45         +----------------------+-------------------------------+
+                   | Iters |    |Ax-b|    |  Rate  |   Residual   |  Msg  |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Flow Enclosure - Step of 0.500000s - Step 45                           |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | U - Mom         |    1  |   8.931e-04  |  0.76  |   8.482e-06  |  OK   |
+ | V - Mom         |    1  |   8.931e-04  |  0.81  |   1.129e-06  |  OK   |
+ | W - Mom         |    1  |   8.931e-04  |  0.78  |   1.487e-06  |  OK   |
+ | P - Mass        |    1  |   8.931e-04  |  0.69  |   3.631e-08  |  OK   |
+ | H - Energy      |   27  |   5.356e+02  |  0.75  |   5.385e-06  |  OK   |
+ +-----------------+-------+--------------+--------+--------------+-------+
+ | Thermal Enclosure - Step 45                                            |
+ +----------+-----------+----------+-----------+----------+---------------+
+ | CSOLVER  |  Minimum  | Location |  Maximum  | Location | Average  Convg|
+ +----------+-----------+----------+-----------+----------+---------------+
+ | y+       | 1.35E+00  |    223172| 4.89E+02  |    225576| 1.14E+02   ok |
+ | T-Solid  | 8.45E+01  |    228525| 2.56E+02  |    219371| 1.46E+02   OK |
+ +----------+-----------+----------+-----------+----------+---------------+
+ +-------------------------------------------------+
+ |           Coupled thermal convergence           |      Heat balance
+ +-----------------+--------+--------------+-------+ ----------------------
+ |    Criteria     |  Rate  |   |Change|   |  Msg  | To fluid:  3.400e+10
+ +-----------------+--------+--------------+-------+           (3.400e+10)
+ | Heat Imbalance  |  0.70  |   7.487e-07  |  OK   | To solid:  0.000e+00
+ | Max delta T     |  0.82  |   6.775e-03  |  OK   |           (0.000e+00)
+ +-----------------+--------+--------------+-------+
+
+ Performing results sampling for Flow Enclosure...
+ Done.
+
+ +-------------------------------------------------------+
+ |              Boundary Mass Flow Summary               |
+ |                    Flow Enclosure                     |
+ +---------------------------+---------------------------+
+ |      ADIABATIC FACES      |            0.000e+00      |
+ |      CONVECTING FACE      |            0.000e+00      |
+ |      Flow Boundary C      |            4.000e+00      |
+ |      Flow Boundary C      |           -4.000e+00      |
+ +---------------------------+---------------------------+
+
+ +-------------------------------------------------------+
+ |             Boundary Volume Flow Summary              |
+ |                    Flow Enclosure                     |
+ +---------------------------+---------------------------+
+ |      ADIABATIC FACES      |            0.000e+00      |
+ |      CONVECTING FACE      |            0.000e+00      |
+ |      Flow Boundary C      |            4.000e+06      |
+ |      Flow Boundary C      |           -4.000e+06      |
+ +---------------------------+---------------------------+
+
+ +-----------------------------------------------------------------------+
+ |                    Boundary Momentum Flow Summary                     |
+ |                            Flow Enclosure                             |
+ +-----------------+-----------------+-----------------+-----------------+
+ |                 |         X-Comp. |         Y-Comp. |         Z-Comp. |
+ +-----------------+-----------------+-----------------+-----------------+
+ | ADIABATIC FACES |       2.961e+04 |      -3.142e+05 |       3.915e+04 |
+ | CONVECTING FACE |      -2.948e+04 |       5.414e+04 |      -3.912e+04 |
+ | Flow Boundary C |       3.590e-03 |       2.484e+05 |      -7.518e-03 |
+ | Flow Boundary C |      -1.315e+02 |       1.165e+04 |      -3.462e+01 |
+ +-----------------+-----------------+-----------------+-----------------+
+
+ +-------------------------------------------------------+
+ |             Boundary Energy Flow Summary              |
+ |                    Flow Enclosure                     |
+ +---------------------------+---------------------------+
+ |      ADIABATIC FACES      |            0.000e+00      |
+ |      CONVECTING FACE      |            3.400e+10      |
+ |      Flow Boundary C      |            6.004e+08      |
+ | Cpu time=      7.4   RSLTPOST Module
+
+   Performing result postprocessing...
+
+   
+   
+      Flow Boundary C      |           -3.460e+10      |
+ +---------------------------+---------------------------+
+
+ Total parallel flow solver time (s): 297.022
+
+
+
+ Coupled Solve complete. Maximum boundary condition change
+ between iterations is less than target.
+
+
+ ESCRR - Convert analysis results
+ ======================================================================
+ Time: Sun Jan 12 21:59:15 2025
+
+ +--------------------------------------------------------------------+                              
+ |                          Results Recovery                          |                              
+ +--------------------------------------------------------------------+                              
+                                                                                                     
+ Recovering Velocity                                                                                 
+ Recovering Pressure                                                                                 
+ Recovering Temperature                                                                              
+ Recovering Y+                                                                                       
+                                                                                                     
+ Reading fluid flow results...                                                                       
+ Reading thermal results...                                                                          
+ Writing results data...                                                                             
+ 
+ 
+ +--------------------------------------------------------------------+                              
+ |                          Solution Summary                          |                              
+ +--------------------------------------------------------------------+                              
+                                                                                                     
+                                                                                                     
+ Results Summary       Maximum       Minimum       Average                                           
+ ----------------------------------------------------------------------                              
+ Fluid Temperature     9.606E+01     7.000E+01     7.132E+01 C                                       
+           at node            13         46381                                                       
+ Fluid Velocity        1.127E+04     1.258E+00     3.358E+03 mm/s                                    
+           at node         58719          2746                                                       
+ Fluid Pressure        1.534E+02    -4.066E+01     7.803E+01 mN/mm^2                                 
+           at node         24124         36923                                                       
+ Solid Temperature     2.562E+02     8.449E+01     1.458E+02 C                                       
+ Y+                    4.598E+02     1.429E+00     1.141E+02                                         
+ Heat Trans. Coef.     0.000E+00     0.000E+00     0.000E+00 mN/mm-s-C                               
+ ----------------------------------------------------------------------                              
+                                                                                                     
+                                                                                                     
+ Volume/Mass Flow Summary                                                                            
+ (Values > 0 are inflows)     Volume Flow          Mass Flow                                         
+ ----------------------------------------------------------------------                              
+ Flow Boundary Condition(1)   4.000E+06 mm^3/s     4.000E+00 kg/s                                    
+ Flow Boundary Condition(2)  -4.000E+06 mm^3/s    -4.000E+00 kg/s                                    
+ ----------------------------------------------------------------------                              
+                                                                                                     
+                                                                                                     
+ Forces at CG                                                                                        
+ of Flow Surfaces            x-comp     y-comp     z-comp     |R|                                    
+ ----------------------------------------------------------------------                              
+ GLOBAL BLOCKAGE                                                                                     
+  CG location (mm):         -1.047E+00  1.517E-01 -1.730E+02                                         
+  CP location (mm):          7.568E+02  3.192E+02 -3.025E+02                                         
+  Total Force (mN):          2.948E+04 -5.414E+04  3.912E+04  7.301E+04                              
+  Total Torque (mN-mm):     -1.802E+07  9.677E+06 -8.160E+07  8.412E+07                              
+  Shear Force (mN):          8.826E+01 -9.351E+00  1.760E+02  1.971E+02                              
+  Shear Torque (mN-mm):     -1.248E+04  8.520E+04 -3.751E+04  9.392E+04                              
+  Pressure Force (mN):       2.939E+04 -5.413E+04  3.894E+04  7.287E+04                              
+  Pressure Torque (mN-mm):  -1.801E+07  9.591E+06 -8.156E+07  8.407E+07                              
+ ----------------------------------------------------------------------                              
+                                                                                                     
+                                                                                                     
+ Flow Solver:                                                                                        
+ Heat Convected To/From Fluid                                                                        
+  (Values > 0 are inflows)     Positive Side        Negative Side                                    
+ ----------------------------------------------------------------------                              
+ GLOBAL BLOCKAGE              3.400E+10 mN-mm/s    0.000E+00 mN-mm/s                                 
+ ----------------------------------------------------------------------                              
+ Total Heat Convected to Fluid  (*)                3.400E+10 mN-mm/s                                 
+ (*) =  - (a+b) when converged                                                                       
+                                                                                                     
+                                                                                                     
+ Thermal Solver: Heat Flow                                                                           
+ ----------------------------------------------------------------------                              
+ Total heat load on non-fluid elements             3.400E+10 mN-mm/s                                 
+ Heat flow into temperature B.C.s                  0.000E+00 mN-mm/s                                 
+ Heat flow from temperature B.C.s                  1.000E-10 mN-mm/s                                 
+ Heat convected to fluid        (a)                3.400E+10 mN-mm/s                                 
+ Heat convected from fluid      (b)                0.000E+00 mN-mm/s                                 
+ ----------------------------------------------------------------------                              
+ Total Heat Imbalance                              3.891E+04 mN-mm/s                                 
+                                                                                                     
+ Solver Convergence                                                                                  
+ ----------------------------------------------------------------------                              
+ Thermal solver - Maximum temperature change       6.781E-03 C                                       
+ Flow solver - Momentum imbalance                  3.126E-06 Percent                                 
+ Flow solver - Mass imbalance                      1.093E-05 Percent                                 
+ Flow solver - Energy imbalance                    1.276E-05 Percent                                 
+ Coupled solution - Maximum temperature change     6.775E-03 C                                       
+ Coupled solution - Normalized Heat Imbalance      7.487E-07                                         
+ ----------------------------------------------------------------------                              
+                                                                                                     
+
+
+
+ +--------------------------------------------------------------------+
+ |                                END                                 |
+ +--------------------------------------------------------------------+
+
+ Solution elapsed time: 05 min 29 sec
+
+ Solve completed at:
+ ======================================================================
+ Time: Sun Jan 12 21:59:16 2025
+

@@ -1,4 +1,4 @@
-EJ20_sim1-BaseSimulation2                     Thu Jan  9  TMG2021.2.5  1/09/2025
+EJ20_sim1-Mod                                 Mon Jan 13  TMG2021.2.5  1/13/2025
 
    Starting TMG Analysis...
 
@@ -8,8 +8,8 @@ Cpu time=      0.1     DATACH Module
 
    Performing data checking...
 
-     Number of nodes                       34396
-     Number of geometric elements          45010
+     Number of nodes                       34184
+     Number of geometric elements          44728
      Number of 1-D/duct fluid elements         0
 
    ...done.
@@ -26,42 +26,42 @@ Cpu time=      1.5       COND Module
 
    ...done.
 
-Cpu time=      4.5      VUFAC Module
+Cpu time=      4.3      VUFAC Module
 
    Calculating thermal couplings and geometric radiative parameters...
 
    ...done.
 
-Cpu time=      5.3      GRAYB Module
+Cpu time=      5.1      GRAYB Module
 
    Calculating radiative couplings and/or gray body matrices...
 
    ...done.
 
-Cpu time=      5.4      POWER Module
+Cpu time=      5.2      POWER Module
 
    Calculating radiative heat loads...
      No radiative heat loads calculated.
 
    ...done.
 
-Cpu time=      5.4      MEREL Module
+Cpu time=      5.2      MEREL Module
 
    Performing element merging and elimination...
 
    ...done.
 
-Cpu time=      6.9   ANALYZER Module
+Cpu time=      6.7   ANALYZER Module
 
    Calculating temperatures...
 
      Model Summary:
 
-     Number of elements                    =    101443
-     Total number of conductances          =    314830
-     Number of linear conductances         =    302385
-     Number of convective conductances     =     12445
-     Number of boundary elements           =     56433
+     Number of elements                    =    100524
+     Total number of conductances          =    311892
+     Number of linear conductances         =    299440
+     Number of convective conductances     =     12452
+     Number of boundary elements           =     55796
 
      Note: During the analysis process a number of elements have been
      created whose labels you may not recognize. To find out more about
@@ -73,17 +73,17 @@ Cpu time=      6.9   ANALYZER Module
      **  The following fluid elements do not convect to any solids.
      **  A complete element list appears in file groups.unv with the
      **  group name FLUIDS_NOT_CONNECTED_TO_SOLIDS_000017.
-             22776     23678     25420     29669     30447     36625
-             38323     46273     48934     58911     63221     64057
-             64058     64140     64517     70800     76147     84632
-             89805     90537     90538     91335     95064    104620
-            106650    109828    116842    130842    130843    132607
-            139977    141552    142333    142718    146300    155157
-            155348    157114    157496    160136
+             32619     38147     38148     59356     65786     70184
+             70211     78534     82893     84497     89241     91632
+             91633    106485    112217    116072    116234    118410
+            119899    124621    125335    125447    127833    129457
+            133402    133405    133413    135483    140534    140958
+            141143    141685    144772    145547    145556    147689
+            147893    152808    155388
 
      **  WARNING  4903 **
      **  Interpolation truncated for table number     4 at iteration       1
-     **  X =   1.6419E+03,  Number of table entries      32
+     **  X =   7.4658E+02,  Number of table entries      32
         Y               X        
     1.5425E+05      2.0000E+01
     1.5432E+05      2.1110E+01
@@ -93,4 +93,4 @@ Cpu time=      6.9   ANALYZER Module
 
    ...done.
 
-Cpu time=      6.9   RSLTPOST Module
+Cpu time=      6.7   RSLTPOST Module
